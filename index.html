@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaisaUdhar </title>
+    <link rel="icon" href="/assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2874ed', // Modern indigo
+                        secondary: '#0EA5E9', // Modern sky blue
+                        accent: '#ffd63a', // Amber
+                        dark: '#1E293B', // Slate dark
+                        light: '#F8FAFC', // Slate light
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-light">
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold">
+                        <!-- <span class="text-accent">Paisa</span><span class="gradient-text">Udhar</span> -->
+                        <img src="./assets/logo/PaisaUdhar-0.svg" alt="Logo" class="h-10 ml-2">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-dark hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-dark hover:text-primary transition-colors">About Us</a>
+                    <a href="#product" class="nav-link text-dark hover:text-primary transition-colors">Features</a>
+                    <a href="#contact" class="nav-link text-dark hover:text-primary transition-colors">Contact</a>
+                    <a href="https://apps.paisaudhar.com" target="_blank"
+                        class="btn-animate bg-gradient text-white px-6 py-2 rounded-full font-medium transition-all hover:shadow-lg">Apply
+                        Now</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-2">
+                <nav class="flex flex-col space-y-3">
+                    <a href="#home" class="nav-link py-2 text-dark hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link py-2 text-dark hover:text-primary transition-colors">About Us</a>
+                    <a href="#product" class="nav-link py-2 text-dark hover:text-primary transition-colors">Features</a>
+                    <a href="#contact" class="nav-link py-2 text-dark hover:text-primary transition-colors">Contact</a>
+                    <a href="https://apps.paisaudhar.com" target="_blank"
+                        class="btn-animate bg-gradient text-white px-6 py-2 rounded-full font-medium text-center transition-all hover:shadow-lg">Apply
+                        Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 md:pt-16 overflow-hidden">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="animated-bg-shape shape1"></div>
+            <div class="animated-bg-shape shape2"></div>
+            <div class="animated-bg-shape shape3"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="text-2xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight">
+                        <span class="gradient-text">Instant Credit Line</span> for Salaried Individuals
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-600">Get ₹1000 to ₹100000 instant credit line based on your salary.
+                        Fast, transparent, and stress-free.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://apps.paisaudhar.com" target="_blank"
+                            class="btn-animate bg-gradient text-white font-bold py-3 px-8 rounded-full text-lg transition-all hover:shadow-xl text-center">Apply
+                            Now</a>
+                        <a href="#product"
+                            class="border-2 border-primary text-primary font-bold py-3 px-8 rounded-full text-lg transition-all hover:bg-primary hover:text-white text-center">Learn
+                            More</a>
+                    </div>
+                    <!-- Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                            <div class="text-accent text-3xl mb-2">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">10 Minutes</h3>
+                            <p class="text-gray-600">Quick approval time</p>
+                        </div>
+
+                        <!-- <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                            <div class="text-primary text-3xl mb-2">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">50,000+</h3>
+                            <p class="text-gray-600">Satisfied customers</p>
+                        </div> -->
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                            <div class="text-secondary text-3xl mb-2">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">20+ Cities</h3>
+                            <p class="text-gray-600">Operational presence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" md:w-1/2 flex justify-center data-aos=" fade-left" data-aos-duration="1000">
+                    <div class="relative">
+                        <!-- <div class="absolute -inset-0.5 bg-gradient rounded-2xl blur opacity-30 animate-pulse-slow">
+                        </div> -->
+                        <img src="./assets/heroimage.png" alt="Financial Services" class="relative animate-float">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gradient-text">Us</span></h2>
+                <div class="w-20 h-1 bg-gradient mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Learn more about our company and our mission to provide
+                    accessible financial solutions.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center px-4 py-8 gap-8">
+                <!-- Image Section -->
+                <div class="w-full lg:w-1/2 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative">
+                        <img src="./assets/team.png" alt="Office Building"
+                            class="rounded-2xl shadow-xl w-full max-w-md mx-auto lg:mx-0">
+                    </div>
+                </div>
+
+                <!-- Text Content Section -->
+                <div class="w-full lg:w-1/2 max-w-xl lg:text-left" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="mb-4 text-lg">
+                        <strong>www.paisaudhar.com</strong> is a leading digital platform offering instant credit line
+                        facilities to salaried individuals based on their current net salary and eligibility.
+                    </p>
+                    <p class="mb-4">
+                        The platform is solely owned and operated by Karmaja Consulting Private Limited, in partnership with Junoon Capital Services  a Non-Banking Financial Company (NBFC) registered with the Reserve Bank of India (RBI) as it’s lending partner.
+                    </p>
+                    <p class="mb-4">
+                        <strong>RBI Registration Number:</strong> B-14.01.812.
+                    </p>
+                    <p class="mb-4">
+                        Karmaja Consulting Pvt. Ltd. is committed to delivering responsible credit solutions that empower individuals to meet their financial needs and regain financial stability.
+                    </p>
+                    <p class="mb-4">
+                        We currently serve salaried employees across selected cities in India with our 100% digital
+                        credit line product.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="animated-bg-shape shape1"></div>
+            <div class="animated-bg-shape shape2"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Key <span class="gradient-text">Features</span></h2>
+                <div class="w-20 h-1 bg-gradient mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Discover our flexible credit line solutions designed to
+                    meet your financial needs.</p>
+            </div>
+
+            <!-- Key Features -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-accent text-4xl mb-6 transform transition-transform group-hover:scale-110">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Instant Credit</h3>
+                    <p class="text-gray-600">Quick approval in just 10 minutes! Hassle-free and 100% paperless process.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">100% secure & RBI-compliant</h3>We follows all
+                    RBI guidelines for your security and peace of mind.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-secondary text-4xl mb-6">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">No Hidden Charges</h3>
+                    <p class="text-gray-600">Transparent fee structure with no hidden charges. Know exactly what you
+                        pay.</p>
+                </div>
+            </div>
+
+            <!-- Usage -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold gradient-text mb-6">Usage</h3>
+                <p class="mb-6 text-lg">Funds can be used for:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="flex items-center bg-white p-5 rounded-xl shadow-md card-hover" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-shopping-basket text-accent"></i>
+                        </div>
+                        <span>Daily needs</span>
+                    </div>
+                    <div class="flex items-center bg-white p-5 rounded-xl shadow-md card-hover" data-aos="zoom-in"
+                        data-aos-delay="150">
+                        <div class="bg-primary/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-exclamation-circle text-primary"></i>
+                        </div>
+                        <span>Financial emergencies</span>
+                    </div>
+                    <div class="flex items-center bg-white p-5 rounded-xl shadow-md card-hover" data-aos="zoom-in"
+                        data-aos-delay="200">
+                        <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-plane-departure text-secondary"></i>
+                        </div>
+                        <span>Travel & food</span>
+                    </div>
+                    <div class="flex items-center bg-white p-5 rounded-xl shadow-md card-hover" data-aos="zoom-in"
+                        data-aos-delay="250">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-heartbeat text-accent"></i>
+                        </div>
+                        <span>Medical expenses</span>
+                    </div>
+                    <div class="flex items-center bg-white p-5 rounded-xl shadow-md card-hover" data-aos="zoom-in"
+                        data-aos-delay="300">
+                        <div class="bg-primary/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-shopping-cart text-primary"></i>
+                        </div>
+                        <span>Grocery purchases</span>
+                    </div>
+                    <div class="flex items-center bg-white p-5 rounded-xl shadow-md card-hover" data-aos="zoom-in"
+                        data-aos-delay="350">
+                        <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-ellipsis-h text-secondary"></i>
+                        </div>
+                        <span>And more</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loan Details -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold gradient-text mb-6">Loan Details & Charges</h3>
+                <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+                    <table class="min-w-full">
+                        <thead class="bg-gradient text-white">
+                            <tr>
+                                <th class="py-4 px-6 text-left rounded-tl-xl">Component</th>
+                                <th class="py-4 px-6 text-left rounded-tr-xl">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- <tr class="hover:bg-gray-50 transition-colors">
+                                <py-4 class="pypy-4 px-6">₹5,000 – ₹50,000</td>
+                            </tr> -->
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6 font-medium">Loan Amount:</td>
+                                <td class="py-4 px-6">₹1000 – ₹100000</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6 font-medium">Rate of Interest (ROI)</td>
+                                <td class="py-4 px-6">0.10% to 1.00% per day</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6 font-medium">Processing Fee</td>
+                                <td class="py-4 px-6">4.00% to 10.00% (exclusive of 18% GST)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6 font-medium">Prepayment Charges</td>
+                                <td class="py-4 px-6">₹0 (No charges on early repayment)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-4 px-6 font-medium rounded-bl-xl">Penalty</td>
+                                <td class="py-4 px-6 rounded-br-xl">Rs. 50/- per day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4 text-sm italic text-gray-600">Charges may vary based on customer risk profile, previous
+                    repayment history, and customer relationship.</p>
+            </div>
+
+            <!-- Example Calculation -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold gradient-text mb-6">Example Calculation</h3>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="mb-3"><span class="font-medium text-black font-bold">Credit Line:</span> ₹20,000
+                                (91 days)
+                            </p>
+                            <p class="mb-3"><span class="font-medium text-black font-bold">Processing Fee:</span> 5%
+                                (₹1,000)
+                            </p>
+                            <p class="mb-3"><span class="font-medium text-black font-bold">GST:</span> ₹180</p>
+                            <p class="mb-3"><span class="font-medium text-black font-bold">Net Disbursed Amount:</span>
+                                ₹18,820
+                            </p>
+                        </div>
+                        <div>
+                            <p class="mb-3"><span class="font-medium text-black font-bold">Total Interest (0.1% per
+                                    day):</span>
+                                ₹1,820</p>
+                            <p class="mb-3"><span class="font-medium text-black font-bold">Total Repayable:</span>
+                                ₹21,820</p>
+                            <p class="mb-3"><span class="font-medium text-black font-bold">APR:</span> 41%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div data-aos="fade-up">
+                <h3 class="text-2xl font-bold gradient-text mb-6">Benefits</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-right"
+                        data-aos-delay="100">
+                        <div class="flex-shrink-0 mr-5">
+                            <div class="bg-gradient text-white p-4 rounded-full">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Easy and quick access to funds</h4>
+                            <p class="text-gray-600">Get the money you need when you need it, without lengthy approval
+                                processes.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-left"
+                        data-aos-delay="150">
+                        <div class="flex-shrink-0 mr-5">
+                            <div class="bg-gradient text-white p-4 rounded-full">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Improve your credit score</h4>
+                            <p class="text-gray-600">Repayment behavior is reported to credit bureaus, helping build
+                                your credit history.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-right"
+                        data-aos-delay="200">
+                        <div class="flex-shrink-0 mr-5">
+                            <div class="bg-gradient text-white p-4 rounded-full">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">No prepayment penalty</h4>
+                            <p class="text-gray-600">Pay back your loan early without any additional charges.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-left"
+                        data-aos-delay="250">
+                        <div class="flex-shrink-0 mr-5">
+                            <div class="bg-gradient text-white p-4 rounded-full">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Flexible Amounts</h4>
+                            <p class="text-gray-600">Upto ₹100000 based on your salary and
+                                eligibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="animated-bg-shape"
+                style="width: 250px; height: 250px; top: 10%; left: 5%; background: rgba(79, 70, 229, 0.05); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; animation: float 8s ease-in-out infinite;">
+            </div>
+            <div class="animated-bg-shape"
+                style="width: 200px; height: 200px; bottom: 10%; right: 5%; background: rgba(245, 158, 11, 0.05); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation: float 9s ease-in-out infinite;">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Customer <span class="gradient-text">Testimonials</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Hear from our satisfied customers about their experience
+                    with PaisaUdhar.</p>
+            </div>
+
+            <!-- Testimonial Slider -->
+            <div class="testimonial-slider" data-aos="fade-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide px-4">
+                        <div class="bg-white rounded-2xl shadow-xl p-8 h-full relative overflow-hidden card-hover">
+                            <span class="quote-mark quote-mark-left text-primary">"</span>
+                            <span class="quote-mark quote-mark-right text-primary">"</span>
+
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-primary">
+                                    <img src="./assets/test/Namrata.jpeg" alt="Namrata Singh"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Namrata Singh</h4>
+                                    <p class="text-gray-600">Software Engineer, Bangalore</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 flex">
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                            </div>
+
+                            <p class="text-gray-700 mb-4">I needed urgent funds for a medical emergency and PaisaUdhar
+                                came through in just 10 minutes! The process was completely digital and hassle-free. I'm
+                                extremely satisfied with their service and transparency.</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide px-4">
+                        <div class="bg-white rounded-2xl shadow-xl p-8 h-full relative overflow-hidden card-hover">
+                            <span class="quote-mark quote-mark-left text-primary">"</span>
+                            <span class="quote-mark quote-mark-right text-primary">"</span>
+
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-primary">
+                                    <img src="./assets/test/Amit.jpeg" alt="Amit Panday"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Amit Panday</h4>
+                                    <p class="text-gray-600">Sales Executive, Delhi</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 flex">
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                            </div>
+
+                            <p class="text-gray-700 mb-4">I've used several credit platforms before, but PaisaUdhar
+                                stands out for its speed and simplicity. The entire process from application to
+                                disbursement took less than 15 minutes. Truly impressive!</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide px-4">
+                        <div class="bg-white rounded-2xl shadow-xl p-8 h-full relative overflow-hidden card-hover">
+                            <span class="quote-mark quote-mark-left text-primary">"</span>
+                            <span class="quote-mark quote-mark-right text-primary">"</span>
+
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-primary">
+                                    <img src="./assets/test/Julie.jpeg" alt="Julie Rajput"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Julie Rajput</h4>
+                                    <p class="text-gray-600">HR Professional, Delhi</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 flex">
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star-half-alt text-accent"></i>
+                            </div>
+
+                            <p class="text-gray-700 mb-4">What impressed me most about PaisaUdhar was the transparency.
+                                No hidden charges, clear terms, and the customer service was excellent. I've recommended
+                                it to several colleagues already!</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide px-4">
+                        <div class="bg-white rounded-2xl shadow-xl p-8 h-full relative overflow-hidden card-hover">
+                            <span class="quote-mark quote-mark-left text-primary">"</span>
+                            <span class="quote-mark quote-mark-right text-primary">"</span>
+
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-primary">
+                                    <img src="./assets/test/Beena.jpeg" alt="Beena Kaira"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Beena Kaira</h4>
+                                    <p class="text-gray-600">Accountant, Hyderabad</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 flex">
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                            </div>
+
+                            <p class="text-gray-700 mb-4">The flexibility of repayment options and the absence of
+                                prepayment penalties made PaisaUdhar perfect for my needs. I was able to manage my
+                                finances better and repay early without any extra cost.</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-slide px-4">
+                        <div class="bg-white rounded-2xl shadow-xl p-8 h-full relative overflow-hidden card-hover">
+                            <span class="quote-mark quote-mark-left text-primary">"</span>
+                            <span class="quote-mark quote-mark-right text-primary">"</span>
+
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-primary">
+                                    <img src="./assets/test/alok.webp" alt="Alok Joshi"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold">Alok Joshi</h4>
+                                    <p class="text-gray-600">Chef, Pune</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 flex">
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star text-accent"></i>
+                                <i class="fas fa-star-half-alt text-accent"></i>
+                            </div>
+
+                            <p class="text-gray-700 mb-4">As someone who values digital experiences, I found the Paisa
+                                Udhar platform incredibly user-friendly. The documentation requirements were minimal,
+                                and verification was quick. Great service!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Navigation -->
+                <!-- <div class="flex justify-center mt-10 space-x-2">
+                    <button class="testimonial-indicator active" data-index="0"></button>
+                    <button class="testimonial-indicator" data-index="1"></button>
+                    <button class="testimonial-indicator" data-index="2"></button>
+                </div> -->
+
+                <!-- Testimonial Controls -->
+                <div class="flex justify-center gap-8 mt-8">
+                    <button id="prevTestimonial"
+                        class="bg-gradient text-white p-3 rounded-full shadow-md hover:shadow-lg transition-all">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button id="nextTestimonial"
+                        class="bg-gradient text-white p-3 rounded-full shadow-md hover:shadow-lg transition-all">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Testimonial Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" data-aos="fade-up">
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover text-center">
+                    <div class="text-accent text-3xl mb-2">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">98%</h3>
+                    <p class="text-gray-600">Customer satisfaction rate</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover text-center">
+                    <div class="text-primary text-3xl mb-2">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">4.8/5</h3>
+                    <p class="text-gray-600">Average customer rating</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover text-center">
+                    <div class="text-secondary text-3xl mb-2">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">85%</h3>
+                    <p class="text-gray-600">Repeat customer rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Now Section -->
+    <section id="apply" class="py-20 bg-white relative overflow-hidden">
+        <!-- Animated Background with enhanced elements -->
+        <div class="animated-bg">
+            <div class="animated-bg-shape shape3"></div>
+            <div class="animated-bg-shape"
+                style="width: 250px; height: 250px; top: 20%; left: 5%; background: rgba(79, 70, 229, 0.05); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; animation: float 8s ease-in-out infinite;">
+            </div>
+            <div class="animated-bg-shape"
+                style="width: 200px; height: 200px; bottom: 10%; right: 5%; background: rgba(245, 158, 11, 0.05); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation: float 9s ease-in-out infinite;">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Apply <span class="gradient-text">Now</span></h2>
+                <div class="w-24 h-1.5 bg-gradient mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">Get your instant credit line in just a few
+                    simple steps. Check if you're eligible and start your application today.</p>
+            </div>
+
+            <!-- Modern Apply Now Content -->
+            <div class="relative">
+                <!-- Decorative elements -->
+                <div class="hidden lg:block absolute -left-16 top-1/4 w-32 h-32 bg-primary/5 rounded-full blur-2xl">
+                </div>
+                <div class="hidden lg:block absolute -right-16 bottom-1/4 w-40 h-40 bg-accent/5 rounded-full blur-2xl">
+                </div>
+
+                <!-- Main content with glass morphism effect -->
+                <div
+                    class="bg-white/70 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 p-8 md:p-12 relative overflow-hidden">
+                    <!-- Decorative circles -->
+                    <div
+                        class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+                    </div>
+                    <div
+                        class="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-accent/10 to-primary/10 rounded-full">
+                    </div>
+
+                    <!-- Apply Now Content -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative">
+                        <!-- Left Column: Eligibility & Documents -->
+                        <div data-aos="fade-right" data-aos-duration="1000" class="relative">
+                            <!-- Eligibility Card -->
+                            <div
+                                class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 mb-10 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                                <div class="flex items-center mb-6">
+                                    <div class="bg-gradient p-3 rounded-xl shadow-md mr-4">
+                                        <i class="fas fa-check text-white text-xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold gradient-text">Eligibility Criteria</h3>
+                                </div>
+
+                                <ul class="space-y-4">
+                                    <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="bg-accent/10 p-2 rounded-full mr-4 flex-shrink-0">
+                                            <i class="fas fa-check-circle text-accent"></i>
+                                        </div>
+                                        <span>Must be an Indian Citizen</span>
+                                    </li>
+                                    <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="150">
+                                        <div class="bg-primary/10 p-2 rounded-full mr-4 flex-shrink-0">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                        </div>
+                                        <span>Salaried employee</span>
+                                    </li>
+                                    <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="bg-secondary/10 p-2 rounded-full mr-4 flex-shrink-0">
+                                            <i class="fas fa-check-circle text-secondary"></i>
+                                        </div>
+                                        <span>Minimum monthly salary: ₹25,000</span>
+                                    </li>
+                                    <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="250">
+                                        <div class="bg-accent/10 p-2 rounded-full mr-4 flex-shrink-0">
+                                            <i class="fas fa-check-circle text-accent"></i>
+                                        </div>
+                                        <span>Age: 21 years and above</span>
+                                    </li>
+                                    <li class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="bg-primary/10 p-2 rounded-full mr-4 flex-shrink-0">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                        </div>
+                                        <span>Valid PAN and Aadhaar card</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Documents Card -->
+                            <div
+                                class="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg p-8 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                                <div class="flex items-center mb-6">
+                                    <div class="bg-gradient p-3 rounded-xl shadow-md mr-4">
+                                        <i class="fas fa-file-alt text-white text-xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold gradient-text">Required Documents</h3>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="bg-secondary/10 p-2 rounded-full mr-3 flex-shrink-0">
+                                            <i class="fas fa-file-alt text-secondary"></i>
+                                        </div>
+                                        <span>Recent passport-size photograph</span>
+                                    </div>
+                                    <div class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="150">
+                                        <div class="bg-accent/10 p-2 rounded-full mr-3 flex-shrink-0">
+                                            <i class="fas fa-file-alt text-accent"></i>
+                                        </div>
+                                        <span>PAN Card</span>
+                                    </div>
+                                    <div class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="bg-primary/10 p-2 rounded-full mr-3 flex-shrink-0">
+                                            <i class="fas fa-file-alt text-primary"></i>
+                                        </div>
+                                        <span>Aadhaar Card</span>
+                                    </div>
+                                    <div class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="250">
+                                        <div class="bg-secondary/10 p-2 rounded-full mr-3 flex-shrink-0">
+                                            <i class="fas fa-file-alt text-secondary"></i>
+                                        </div>
+                                        <span>Address proof</span>
+                                    </div>
+                                    <div class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="bg-accent/10 p-2 rounded-full mr-3 flex-shrink-0">
+                                            <i class="fas fa-file-alt text-accent"></i>
+                                        </div>
+                                        <span>Last 6 month's bank statement</span>
+                                    </div>
+                                    <div class="flex items-start bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                        data-aos="zoom-in" data-aos-delay="350">
+                                        <div class="bg-primary/10 p-2 rounded-full mr-3 flex-shrink-0">
+                                            <i class="fas fa-file-alt text-primary"></i>
+                                        </div>
+                                        <span>Latest 3 month's salary slips</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Application Process -->
+                        <div data-aos="fade-left" data-aos-duration="1000" class="relative">
+                            <div
+                                class="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg p-8 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                                <div class="flex items-center mb-8">
+                                    <div class="bg-gradient p-3 rounded-xl shadow-md mr-4">
+                                        <i class="fas fa-rocket text-white text-xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold gradient-text">How to Get Started</h3>
+                                </div>
+
+                                <!-- Modern timeline with connected steps -->
+                                <div class="relative">
+                                    <!-- Timeline line -->
+                                    <div
+                                        class="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-accent rounded-full">
+                                    </div>
+
+                                    <!-- Steps -->
+                                    <div class="space-y-8">
+                                        <!-- Step 1 -->
+                                        <div class="relative pl-16" data-aos="fade-up" data-aos-delay="100">
+                                            <div
+                                                class="absolute left-0 w-12 h-12 bg-gradient rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                                                1</div>
+                                            <div
+                                                class="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                                                <h4 class="text-lg font-semibold mb-1">Visit www.paisaudhar.com</h4>
+                                                <p class="text-gray-600">Access our website from any device.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 2 -->
+                                        <div class="relative pl-16" data-aos="fade-up" data-aos-delay="150">
+                                            <div
+                                                class="absolute left-0 w-12 h-12 bg-gradient rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                                                2</div>
+                                            <div
+                                                class="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                                                <h4 class="text-lg font-semibold mb-1">Click "Apply Now"</h4>
+                                                <p class="text-gray-600">Start your application process.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 3 -->
+                                        <div class="relative pl-16" data-aos="fade-up" data-aos-delay="200">
+                                            <div
+                                                class="absolute left-0 w-12 h-12 bg-gradient rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                                                3</div>
+                                            <div
+                                                class="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                                                <h4 class="text-lg font-semibold mb-1">Sign up & create your profile
+                                                </h4>
+                                                <p class="text-gray-600">Register with your basic details.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 4 -->
+                                        <div class="relative pl-16" data-aos="fade-up" data-aos-delay="250">
+                                            <div
+                                                class="absolute left-0 w-12 h-12 bg-gradient rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                                                4</div>
+                                            <div
+                                                class="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                                                <h4 class="text-lg font-semibold mb-1">Upload few documents &
+                                                    submit</h4>
+                                                <p class="text-gray-600">Submit required details to complete
+                                                    application.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 5 -->
+                                        <div class="relative pl-16" data-aos="fade-up" data-aos-delay="350">
+                                            <div
+                                                class="absolute left-0 w-12 h-12 bg-gradient rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                                                5</div>
+                                            <div
+                                                class="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                                                <h4 class="text-lg font-semibold mb-1">Get approval within 10 minutes
+                                                </h4>
+                                                <p class="text-gray-600">Quick verification and approval process.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 6 -->
+                                        <div class="relative pl-16" data-aos="fade-up" data-aos-delay="400">
+                                            <div
+                                                class="absolute left-0 w-12 h-12 bg-gradient rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                                                6</div>
+                                            <div
+                                                class="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                                                <h4 class="text-lg font-semibold mb-1">Complete eKYC, Mandate & E-sign
+                                                </h4>
+                                                <p class="text-gray-600">Digitally complete eKYC, NACH
+                                                    & document signing.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 7 -->
+                                        <div class="relative pl-16" data-aos="fade-up" data-aos-delay="450">
+                                            <div
+                                                class="absolute left-0 w-12 h-12 bg-gradient rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                                                7</div>
+                                            <div
+                                                class="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                                                <h4 class="text-lg font-semibold mb-1">Receive funds instantly</h4>
+                                                <p class="text-gray-600">Funds directly deposited to your bank account.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Apply Now Button -->
+                    <div class="mt-10 flex justify-center items-center w-full" data-aos="zoom-in">
+                        <a href="https://apps.paisaudhar.com" target="_blank"
+                            class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient p-0.5 font-bold text-lg">
+                            <span
+                                class="relative flex items-center justify-center bg-white text-primary px-10 py-4 rounded-full transition-all duration-300 ease-out group-hover:bg-opacity-0 group-hover:text-white">
+                                <span>Apply Now</span>
+                                <i
+                                    class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-1"></i>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Operational Cities -->
+                <div class="mt-16 max-w-7xl mx-auto" data-aos="fade-up">
+                    <div class="bg-gradient-to-r from-primary/5 to-secondary/5 p-8 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient p-3 rounded-xl shadow-md mr-4">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold gradient-text">Operational Cities</h3>
+                        </div>
+                        <p class="text-center text-gray-600 leading-relaxed">Delhi NCR (Faridabad, Noida, Gurugram,
+                            Sonipat, Ghaziabad), Mumbai, Chennai, Bangalore, Mangalore, Pune, Hyderabad, Ahmedabad,
+                            Chandigarh, Kanpur, Dehradun, Lucknow, Patna, Bhopal, Indore, Meerut, Jalandhar, Amritsar,
+                            Ludhiana, Jaipur, Shimla, Ranchi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section class="py-20 bg-gray-50 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Privacy <span class="gradient-text">Policy</span></h2>
+                <div class="w-20 h-1 bg-gradient mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We take your privacy and data security very seriously.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up">
+                <h3 class="text-2xl font-bold gradient-text mb-6">Security & Data Protection</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start bg-gray-50 p-5 rounded-xl card-hover" data-aos="fade-right"
+                        data-aos-delay="100">
+                        <div class="bg-primary/10 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-primary"></i>
+                        </div>
+                        <span>256-bit SSL encryption ensures complete security of transactions.</span>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-5 rounded-xl card-hover" data-aos="fade-left"
+                        data-aos-delay="150">
+                        <div class="bg-secondary/10 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-secondary"></i>
+                        </div>
+                        <span>RBI-Compliant Digital Lending App – Follows RBI 2022 Digital Lending Guidelines.</span>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-5 rounded-xl card-hover" data-aos="fade-right"
+                        data-aos-delay="200">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-accent"></i>
+                        </div>
+                        <span>All data is transferred over secured connections. Data security & privacy is the top
+                            priority.</span>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-5 rounded-xl card-hover" data-aos="fade-left"
+                        data-aos-delay="250">
+                        <div class="bg-primary/10 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-primary"></i>
+                        </div>
+                        <span>Our IT Professional's team adjusts to mandated security standards & sturdy
+                            protocols.</span>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-5 rounded-xl card-hover" data-aos="fade-right"
+                        data-aos-delay="300">
+                        <div class="bg-secondary/10 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-secondary"></i>
+                        </div>
+                        <span>We do NOT access your contacts, SMS, Gallery or location.</span>
+                    </div>
+                    <div class="flex items-start bg-gray-50 p-5 rounded-xl card-hover" data-aos="fade-left"
+                        data-aos-delay="350">
+                        <div class="bg-accent/10 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-accent"></i>
+                        </div>
+                        <span>Your data is totally safe with us.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="animated-bg-shape shape1"></div>
+            <div class="animated-bg-shape shape3"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact <span class="gradient-text">Us</span></h2>
+                <div class="w-20 h-1 bg-gradient mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Have questions? We're here to help. Reach out to us
+                    using any of the methods below.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold gradient-text mb-6">PaisaUdhar (Junoon Capital Services Pvt. Ltd.)</h3>
+                        <!-- <p class="mb-6 text-gray-600">Plot No 1, Pocket C, Sector 17, Dwarka, New Delhi, 110075</p> -->
+                        <p class="mb-6 text-gray-600">Apex Tower III, 2nd Floor, Property No. 6, Pocket-3, Block-B, Sector-17, Dwarka, South West Delhi-110078</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <div class="bg-accent/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-headset text-accent"></i>
+                                </div>
+                                <span type="tel">Help Line No: +919289965670</span>
+                            </li>
+                            <!-- <li class="flex items-center">
+                                <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-secondary"></i>
+                                </div>
+                                <span>Email ID: info@junooncapital.com </span>
+                            </li> -->
+                            <li class="flex items-center">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <span type="email">Customer support: info@paisaudhar.com </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 bg-white p-8 rounded-xl shadow-lg card-hover">
+                        <h3 class="text-2xl font-bold gradient-text mb-6">Grievance Redressal Officer</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-user text-secondary"></i>
+                                </div>
+                                <span>Name: Sachin Kumar Srivastava </span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="bg-accent/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-mobile-alt text-accent"></i>
+                                </div>
+                                <span type="tel">Mobile No: +919311343335 </span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <span type="tel">Email ID: nodal.gro@junooncapital.com </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <form id ="myform" class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold gradient-text mb-6">Send us a message</h3>
+                        <div class="mb-5">
+                            <label for="name" class="block text-gray-700 mb-2 font-medium">Your Name</label>
+                            <input required type="text" id="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                placeholder="Enter your name">
+                        </div>
+                        <div class="mb-5">
+                            <label for="email" class="block text-gray-700 mb-2 font-medium">Email Address</label>
+                            <input required type="email" id="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                placeholder="Enter your email">
+                        </div>
+                        <div class="mb-5">
+                            <label for="phone" class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                            <input maxlength="10" required type="tel" id="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-5">
+                            <label for="message" class="block text-gray-700 mb-2 font-medium">Your Message</label>
+                            <textarea required id="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                placeholder="Type your message here..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="btn-animate bg-gradient text-white font-bold py-3 px-6 rounded-lg transition-all hover:shadow-xl w-full relative overflow-hidden">
+                            <span class="relative z-10">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="#home" class="text-2xl font-bold">
+                        <!-- <span class="text-accent">Paisa</span>Udhar -->
+                        <img src="./assets/logo/PaisaUdhar-white.png" alt="Logo" class="h-10 ml-2">
+                    </a>
+                    <p class=" mt-2">Instant Credit Line for Salaried Individuals</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="grievance-redressal.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+                        Grievance Redressal |
+                    </a>
+
+                    <a href="terms.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+
+                        Terms & Condition |
+                    </a>
+                    <a href="refund-policy.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+
+                        Refund Policy |
+                    </a>
+                    <a href="privacy-policy.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+
+                        Privacy policy
+                    </a>
+                </div>
+            </div>
+
+            <hr class="border-white/20 my-8">
+
+            <div class="text-center">
+                <p>&copy; 2025 Junoon Capital Services Private Limited. All rights reserved.</p>
+                <!-- <p class="mt-2 text-sm">RBI Registered NBFC</p> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 bg-gradient text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        //Form Handling
+        const form = document.getElementById("myform");
+        const button = form.querySelector("button");
+
+        form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        button.innerText = "Sending...";
+        button.disabled = true;
+
+        try {
+            const res = await fetch("https://lmsapi.paisaudhar.com/api/Common/ContactUs", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name: document.getElementById("name").value,
+                Email: document.getElementById("email").value,
+                Mobile: document.getElementById("phone").value,
+                Remarks: document.getElementById("message").value,
+                Product_Code: "PU",
+                CompanyName: "JUNOON"
+            }),
+            });
+            const data = await res.json();
+            
+            if (data.Status) {
+                Toastify({
+                    text: data.Message,
+                    duration: 3000,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#1dcd9f",
+                }).showToast();
+
+                document.getElementById("myform").reset();
+                } else {
+                Toastify({
+                    text: data.Message || "Something went wrong",
+                    duration: 3000,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "red",
+                }).showToast();
+            }
+        } catch (err) {
+            console.log(err);
+            alert("Error ❌");
+        } finally {
+            button.innerText = "Send Message";
+            button.disabled = false;
+        }
+        });
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS animation library
+            AOS.init({
+                duration: 800,
+                once: false,
+                mirror: true
+            });
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a nav link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Scroll progress bar
+            const progressBar = document.getElementById('progressBar');
+
+            window.addEventListener('scroll', function () {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+
+                progressBar.style.width = scrolled + '%';
+
+                // Back to top button visibility
+                const backToTopBtn = document.getElementById('backToTop');
+                if (winScroll > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+
+                // Add active class to nav links on scroll
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-accent');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('text-accent');
+                    }
+                });
+            });
+
+            // Back to top button functionality
+            const backToTopBtn = document.getElementById('backToTop');
+            backToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Form input animations
+            const formInputs = document.querySelectorAll('input, textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.classList.add('scale-105');
+                    this.classList.add('shadow-md');
+                });
+
+                input.addEventListener('blur', function () {
+                    this.parentElement.classList.remove('scale-105');
+                    this.classList.remove('shadow-md');
+                });
+            });
+
+            // Testimonial slider functionality
+            const testimonialTrack = document.getElementById('testimonialTrack');
+            const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+            const indicators = document.querySelectorAll('.testimonial-indicator');
+            const prevBtn = document.getElementById('prevTestimonial');
+            const nextBtn = document.getElementById('nextTestimonial');
+
+            let currentIndex = 0;
+            let slideWidth = 100;
+            let slidesToShow = 1;
+
+            // Determine how many slides to show based on screen width
+            function updateSlidesToShow() {
+                if (window.innerWidth >= 1024) {
+                    slidesToShow = 3;
+                } else if (window.innerWidth >= 768) {
+                    slidesToShow = 2;
+                } else {
+                    slidesToShow = 1;
+                }
+
+                slideWidth = 100 / slidesToShow;
+
+                // Update slide widths
+                testimonialSlides.forEach(slide => {
+                    slide.style.flex = `0 0 ${slideWidth}%`;
+                    slide.style.maxWidth = `${slideWidth}%`;
+                });
+
+                // Update track position
+                updateSlidePosition();
+            }
+
+            function updateSlidePosition() {
+                testimonialTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', Math.floor(index * slidesToShow / 3) === Math.floor(currentIndex / 3));
+                });
+            }
+
+            function nextSlide() {
+                if (currentIndex < testimonialSlides.length - slidesToShow) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateSlidePosition();
+            }
+
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = testimonialSlides.length - slidesToShow;
+                }
+                updateSlidePosition();
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index * 3;
+                    if (currentIndex > testimonialSlides.length - slidesToShow) {
+                        currentIndex = testimonialSlides.length - slidesToShow;
+                    }
+                    updateSlidePosition();
+                });
+            });
+
+            // Auto slide
+            let slideInterval = setInterval(nextSlide, 5000);
+
+            // Pause on hover
+            testimonialTrack.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            testimonialTrack.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+
+            // Initialize slider
+            updateSlidesToShow();
+
+            // Update on resize
+            window.addEventListener('resize', updateSlidesToShow);
+        });
+    </script>
+</body>
+
+</html>

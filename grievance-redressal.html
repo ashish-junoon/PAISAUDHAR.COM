@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Redressal: PaisaUdhar </title>
+    <link rel="icon" href="/assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2874ed', // Modern indigo
+                        secondary: '#0EA5E9', // Modern sky blue
+                        accent: '#ffd63a', // Amber
+                        dark: '#1E293B', // Slate dark
+                        light: '#F8FAFC', // Slate light
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+
+</head>
+
+<body class="font-sans text-gray-800 bg-light">
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold">
+                        <!-- <span class="text-accent">Paisa</span><span class="gradient-text">Udhar</span> -->
+                        <img src="./assets/logo/PaisaUdhar-0.svg" alt="Logo" class="h-10 ml-2">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#home" class="nav-link text-dark hover:text-primary transition-colors">Home</a>
+                    <a href="index.html#about" class="nav-link text-dark hover:text-primary transition-colors">About
+                        Us</a>
+                    <a href="index.html#product"
+                        class="nav-link text-dark hover:text-primary transition-colors">Features</a>
+                    <a href="index.html#contact"
+                        class="nav-link text-dark hover:text-primary transition-colors">Contact</a>
+                    <a href="https://apps.paisaudhar.com" target="_blank"
+                        class="btn-animate bg-gradient text-white px-6 py-2 rounded-full font-medium transition-all hover:shadow-lg">Apply
+                        Now</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-2">
+                <nav class="flex flex-col space-y-3">
+                    <a href="index.html#home"
+                        class="nav-link py-2 text-dark hover:text-primary transition-colors">Home</a>
+                    <a href="index.html#about"
+                        class="nav-link py-2 text-dark hover:text-primary transition-colors">About Us</a>
+                    <a href="index.html#product"
+                        class="nav-link py-2 text-dark hover:text-primary transition-colors">Features</a>
+                    <a href="index.html#contact"
+                        class="nav-link py-2 text-dark hover:text-primary transition-colors">Contact</a>
+                    <a href="https://apps.paisaudhar.com" target="_blank"
+                        class="btn-animate bg-gradient text-white px-6 py-2 rounded-full font-medium text-center transition-all hover:shadow-lg">Apply
+                        Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main sanctions -->
+    <section class="">
+        <section id="contact" class="bg-white relative overflow-hidden">
+            <!-- Animated Background -->
+            <div class="animated-bg">
+                <div class="animated-bg-shape shape1"></div>
+                <div class="animated-bg-shape shape3"></div>
+            </div>
+
+            <div class="pt-8 max-w-7xl mx-auto px-4 relative z-10" data-aos="fade-up">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-2xl md:text-4xl font-bold mb-4">Grievance <span
+                            class="gradient-text">Redressal</span>
+                    </h2>
+                    <div class="w-24 h-1.5 bg-gradient mx-auto rounded-full"></div>
+
+                </div>
+
+                <div class=" section">
+                    <h2 class="font-bold">1. OBJECTIVE</h2>
+                    <p>As a service organization, it is our primary responsibility to focus on customer service and
+                        satisfaction.
+                        This document details the policy of redressal of customer complaints. The key objective of this
+                        policy is to
+                        ensure the following:</p>
+                    <ul class="list-disc ml-10">
+                        <li>All concerns/complaints raised by Customers are resolved in an effective and timely manner,
+                            leading to their satisfaction.</li>
+                        <li>Through Customers’ feedback, we are able to improve our processes and products.</li>
+                        <li>In an event that the Customer is not satisfied with the resolution provided to him, he can
+                            escalate the issue to higher level in the organization.</li>
+                    </ul>
+
+                    <p class="my-5">This document aims to describe internal policy for handling Customer complaints. It
+                        describes
+                        various
+                        channels for lodging the complaint, obtaining solutions from the concerned department and
+                        responding
+                        to
+                        Customers within the committed time period.</p>
+
+                    <h3 class="font-bold mt-8">Complaint:</h3>
+                    <p>Complaint is an expression of dissatisfaction or resentment in the form of a representation or
+                        allegation
+                        made in writing, electronically, or by phone, alleging deficiency in:</p>
+                    <ul class="list-disc ml-10">
+                        <li>Services, products, or policies of Junoon Capital Services Private Limited</li>
+                        <li>Services provided by outsourcing agencies engaged by Junoon Capital</li>
+                        <li>Employee’s behavior</li>
+                        <li>Maintaining confidentiality/ protection of Customer’s personal (including sensitive personal
+                            information) and financial information</li>
+                    </ul>
+                    <p class="py-5">Complaint is not a request for data modification or inquiry about loan products/
+                        schemes, interest rates or other requests which can be solved by Customer care</p>
+
+                    <h3 class="font-bold">Customers:</h3>
+                    <p>Customer means the person who has obtained the loan or finance facility from Junoon Capital
+                        Services Private Limited.</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="font-bold py-3">2. PROCEDURE FOR RAISING A COMPLAINT</h2>
+
+                    <h3 class="font-semibold">2.1 Complaints may be sent in either of the below mentioned forms:</h3>
+                    <ul class="list-disc ml-10">
+                        <li>Call: <strong>9311343335</strong></li>
+                        <li>Email: <strong>care@junooncapital.com</strong></li>
+                    </ul>
+                    <p class="py-3">
+                        Where a Customer visits our offices in Cities where we operate, Office Admins shall assist such
+                        Customer to raise his/her query through official channels mentioned on our website or on our
+                        loan application “PaisaUdhar”.
+                    </p>
+
+                    <h3 class="py-3 font-bold">2.2 Complaint raising by the Customer</h3>
+                    <ul class="list-disc ml-10">
+                        <li>Customer’s full name</li>
+                        <li>Complete correspondence address</li>
+                        <li>Registered Email ID</li>
+                        <li>Registered contact number</li>
+                        <li>Detailed description of complaint</li>
+                        <li>Supporting documents (if any)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10" data-aos="fade-up">
+            <h2 class="py-3 font-bold">3. PROCEDURE FOR ADDRESSING THE COMPLAINT</h2>
+
+            <h3 class="font-semibold">3.1 Complaints Treatment</h3>
+            <p>
+                First call resolution: All the complaints which can be resolved immediately when raised, the response
+                should be provided on the same call and close the same.
+            </p>
+
+            <p>
+                Resolution post verification: For the complaints which must be verified and may need further
+                investigation/support from other departments and hence cannot be resolved immediately, Customer should
+                be informed about the expected timelines of the closure. For these complaints, a formal written
+                communication should be given to the concerned department by the authorized person keeping GRO in the
+                loop.
+
+                Customer care department should always inform the Customer about the following:
+            </p>
+            <ul class="list-disc ml-10">
+                <li>Information pertaining to all issues/concerns raised by the Customer</li>
+                <li>Explanation of final solution provided</li>
+                <li>Expected timelines towards closure (where immediate solution cannot be provided)</li>
+                <li>Maintain contact at defined intervals/milestones to communicate progress on his concern and share
+                    reasons for delay/time taken</li>
+                <li>Request for supporting documents/information (where applicable) in a clear manner along with the
+                    reason for such requirement</li>
+            </ul>
+
+            <p class="py-3">
+                The Customer Care Specialist should make limited but reasonable attempts to reach the Customer for
+                providing solution to his/ her complaint, preferably in the form the complaint was received.
+            </p>
+
+            <h1 class="font-semibold">3.2 Complaint archiving</h1>
+            <p class="mb-5">After the resolution is provided to the Customer the concerned department updates the status
+                of these
+                complaints as closed in our system. These complaints reflect in closed complaints bucket which can be
+                re-examined at any point of time as and when required.</p>
+
+
+            <h1 class="font-semibold">3.3 TAT for Responding to Complaints</h1>
+            <p class="mb-5">After the resolution is provided to the Customer the concerned department updates the status
+                of these complaints as closed in our system. These complaints reflect in closed complaints bucket which
+                can be re-examined at any point of time as and when required.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>S No.</th>
+                        <th>Types of Complaints</th>
+                        <th>TAT</th>
+                        <th>Responding Officer & Email ID</th>
+                        <th>Remedial Action Taken</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Payment Updation Related</td>
+                        <td>1-2 Working Days</td>
+                        <td>payments@junooncapital.com</td>
+                        <td>Reconcile bank statement & update customer account</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Payment Refund Related</td>
+                        <td>7-10 Working Days</td>
+                        <td>payments@junooncapital.com</td>
+                        <td>Verify double deduction or excess amount, refund to customer account</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Loan Status Related</td>
+                        <td>2-3 Working Days</td>
+                        <td>care@junooncapital.com</td>
+                        <td>Check with credit team, provide disbursement status</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Collections/Recovery Related</td>
+                        <td>4-5 Working Days</td>
+                        <td>care@junooncapital.com &<br>payments@junooncapital.com</td>
+                        <td>Understand issue, guide customer on payment cycle</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Other Complaints</td>
+                        <td>7-10 Working Days</td>
+                        <td>care@junooncapital.com</td>
+                        <td>Forward to relevant department and update customer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10 mb-10" data-aos="fade-up">
+            <h2 class="font-bold py-3">4. ESCALATION PROCESS</h2>
+
+            <h3 class="font-semibold">4.1 Escalation Level 1: Grievance Redressal Officer</h3>
+            <p>If the Customer is not satisfied with the resolution or has not received any resolution within the
+                committed turnaround time, he/she can raise his/her concern by giving background and history of the
+                issue, in the following form:</p>
+            <br>
+            <p class="my-5">In writing (through hard copy/ letter) to:</p>
+
+            <h1 class="font-bold">Customer Care, Grievance Redressal Office</h1>
+            <p>
+                Address: Apex Tower -III, Property No. 6,</br> 2nd Floor, Pocket-3, Block-B, Sector-17, Dwarka</br> New Delhi-110078
+            </p>
+            Email: <strong>grievance@junooncapital.com</strong><br />
+            Contact: <strong>9311343335</strong>
+            </p>
+
+            <h1 class="font-bold mt-5">Resolution turnaround time</h1>
+            <p>Grievance redressal officer’s office will respond within 3 working days of receiving the complaint and
+                provide resolution within 30 working days.
+                All the Customer complaints have to be resolved within 30 days of receipt/escalation.
+                In order to escalate the complaint to next level, the Customer should share the details/copy of his/her
+                recently closed complaint with the resolution provided by the concerned department.</p>
+
+            <h1 class="font-bold mt-5">Escalation Level 2: Nodal Officer</h1>
+            <p>Junoon Capital Services Private Limited has appointed Mr. Sachin Srivastava as the Nodal Officer.</p>
+
+            <h1 class="font-bold mt-5">Legal & Compliance Department</h1>
+            <p>
+                Address: Apex Tower -III, Property No. 6,</br> 2nd Floor, Pocket-3, Block-B, Sector-17, Dwarka</br> New Delhi-110078
+            </p>
+            Email: <strong>grievance@junooncapital.com</strong><br />
+            Contact: <strong>9311343335</strong>
+            </p>
+            <p class="my-5">
+                In the event that the complaint remains pending at Level 2 for a period of more than 7 working days, or
+                if the customer is not satisfied with the outcome of Level 2 resolution, the customer can contact the
+                Regional Office of the Reserve Bank of India (or via RBI’s website https://cms.rbi.org.in).
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gradient text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="#home" class="text-2xl font-bold">
+                        <!-- <span class="text-accent">Paisa</span>Udhar -->
+                        <img src="./assets/logo/PaisaUdhar-white.png" alt="Logo" class="h-10 ml-2">
+                    </a>
+                    <p class=" mt-2">Instant Credit Line for Salaried Individuals</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="grievance-redressal.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+                        Grievance Redressal |
+                    </a>
+
+                    <a href="terms.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+
+                        Terms & Condition |
+                    </a>
+                    <a href="refund-policy.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+
+                        Refund Policy |
+                    </a>
+                    <a href="privacy-policy.html" target="_blank"
+                        class="hover:text-accent transition duration-300 transform hover:scale-110">
+
+                        Privacy policy
+                    </a>
+                </div>
+            </div>
+
+            <hr class="border-white/20 my-8">
+
+            <div class="text-center">
+                <p>&copy; 2025 Junoon Capital Services Private Limited. All rights reserved.</p>
+                <!-- <p class="mt-2 text-sm">RBI Registered NBFC</p> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 bg-gradient text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS animation library
+            AOS.init({
+                duration: 800,
+                once: false,
+                mirror: true
+            });
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a nav link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Scroll progress bar
+            const progressBar = document.getElementById('progressBar');
+
+            window.addEventListener('scroll', function () {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+
+                progressBar.style.width = scrolled + '%';
+
+                // Back to top button visibility
+                const backToTopBtn = document.getElementById('backToTop');
+                if (winScroll > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+
+                // Add active class to nav links on scroll
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-accent');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('text-accent');
+                    }
+                });
+            });
+
+            // Back to top button functionality
+            const backToTopBtn = document.getElementById('backToTop');
+            backToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Form input animations
+            const formInputs = document.querySelectorAll('input, textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.classList.add('scale-105');
+                    this.classList.add('shadow-md');
+                });
+
+                input.addEventListener('blur', function () {
+                    this.parentElement.classList.remove('scale-105');
+                    this.classList.remove('shadow-md');
+                });
+            });
+
+            // Testimonial slider functionality
+            const testimonialTrack = document.getElementById('testimonialTrack');
+            const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+            const indicators = document.querySelectorAll('.testimonial-indicator');
+            const prevBtn = document.getElementById('prevTestimonial');
+            const nextBtn = document.getElementById('nextTestimonial');
+
+            let currentIndex = 0;
+            let slideWidth = 100;
+            let slidesToShow = 1;
+
+            // Determine how many slides to show based on screen width
+            function updateSlidesToShow() {
+                if (window.innerWidth >= 1024) {
+                    slidesToShow = 3;
+                } else if (window.innerWidth >= 768) {
+                    slidesToShow = 2;
+                } else {
+                    slidesToShow = 1;
+                }
+
+                slideWidth = 100 / slidesToShow;
+
+                // Update slide widths
+                testimonialSlides.forEach(slide => {
+                    slide.style.flex = `0 0 ${slideWidth}%`;
+                    slide.style.maxWidth = `${slideWidth}%`;
+                });
+
+                // Update track position
+                updateSlidePosition();
+            }
+
+            function updateSlidePosition() {
+                testimonialTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', Math.floor(index * slidesToShow / 3) === Math.floor(currentIndex / 3));
+                });
+            }
+
+            function nextSlide() {
+                if (currentIndex < testimonialSlides.length - slidesToShow) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateSlidePosition();
+            }
+
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = testimonialSlides.length - slidesToShow;
+                }
+                updateSlidePosition();
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index * 3;
+                    if (currentIndex > testimonialSlides.length - slidesToShow) {
+                        currentIndex = testimonialSlides.length - slidesToShow;
+                    }
+                    updateSlidePosition();
+                });
+            });
+
+            // Auto slide
+            let slideInterval = setInterval(nextSlide, 5000);
+
+            // Pause on hover
+            testimonialTrack.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            testimonialTrack.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+
+            // Initialize slider
+            updateSlidesToShow();
+
+            // Update on resize
+            window.addEventListener('resize', updateSlidesToShow);
+        });
+    </script>
+</body>
+
+</html>
