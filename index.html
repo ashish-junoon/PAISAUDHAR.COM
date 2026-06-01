@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -47,6 +47,26 @@
             }
         }
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '936445115548618');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=936445115548618&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body class="font-sans text-gray-800 bg-light">
@@ -187,13 +207,16 @@
                         facilities to salaried individuals based on their current net salary and eligibility.
                     </p>
                     <p class="mb-4">
-                        The platform is solely owned and operated by Karmaja Consulting Private Limited, in partnership with Junoon Capital Services  a Non-Banking Financial Company (NBFC) registered with the Reserve Bank of India (RBI) as it’s lending partner.
+                        The platform is solely owned and operated by Karmaja Consulting Private Limited, in partnership
+                        with Junoon Capital Services a Non-Banking Financial Company (NBFC) registered with the Reserve
+                        Bank of India (RBI) as it’s lending partner.
                     </p>
                     <p class="mb-4">
                         <strong>RBI Registration Number:</strong> B-14.01.812.
                     </p>
                     <p class="mb-4">
-                        Karmaja Consulting Pvt. Ltd. is committed to delivering responsible credit solutions that empower individuals to meet their financial needs and regain financial stability.
+                        Karmaja Consulting Pvt. Ltd. is committed to delivering responsible credit solutions that
+                        empower individuals to meet their financial needs and regain financial stability.
                     </p>
                     <p class="mb-4">
                         We currently serve salaried employees across selected cities in India with our 100% digital
@@ -1046,9 +1069,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
-                        <h3 class="text-2xl font-bold gradient-text mb-6">PaisaUdhar (Junoon Capital Services Pvt. Ltd.)</h3>
+                        <h3 class="text-2xl font-bold gradient-text mb-6">PaisaUdhar (Junoon Capital Services Pvt. Ltd.)
+                        </h3>
                         <!-- <p class="mb-6 text-gray-600">Plot No 1, Pocket C, Sector 17, Dwarka, New Delhi, 110075</p> -->
-                        <p class="mb-6 text-gray-600">Apex Tower III, 2nd Floor, Property No. 6, Pocket-3, Block-B, Sector-17, Dwarka, South West Delhi-110078</p>
+                        <p class="mb-6 text-gray-600">Apex Tower III, 2nd Floor, Property No. 6, Pocket-3, Block-B,
+                            Sector-17, Dwarka, South West Delhi-110078</p>
                         <ul class="space-y-4">
                             <li class="flex items-center">
                                 <div class="bg-accent/10 p-3 rounded-full mr-4">
@@ -1097,7 +1122,7 @@
                 </div>
 
                 <div data-aos="fade-left" data-aos-duration="1000">
-                    <form id ="myform" class="bg-white p-8 rounded-xl shadow-lg">
+                    <form id="myform" class="bg-white p-8 rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold gradient-text mb-6">Send us a message</h3>
                         <div class="mb-5">
                             <label for="name" class="block text-gray-700 mb-2 font-medium">Your Name</label>
@@ -1192,56 +1217,56 @@
         const button = form.querySelector("button");
 
         form.addEventListener("submit", async function (e) {
-        e.preventDefault();
+            e.preventDefault();
 
-        button.innerText = "Sending...";
-        button.disabled = true;
+            button.innerText = "Sending...";
+            button.disabled = true;
 
-        try {
-            const res = await fetch("https://lmsapi.paisaudhar.com/api/Common/ContactUs", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                name: document.getElementById("name").value,
-                Email: document.getElementById("email").value,
-                Mobile: document.getElementById("phone").value,
-                Remarks: document.getElementById("message").value,
-                Product_Code: "PU",
-                CompanyName: "JUNOON"
-            }),
-            });
-            const data = await res.json();
-            
-            if (data.Status) {
-                Toastify({
-                    text: data.Message,
-                    duration: 3000,
-                    gravity: "top",
-                    position: "right",
-                    backgroundColor: "#1dcd9f",
-                }).showToast();
+            try {
+                const res = await fetch("https://lmsapi.paisaudhar.com/api/Common/ContactUs", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name: document.getElementById("name").value,
+                        Email: document.getElementById("email").value,
+                        Mobile: document.getElementById("phone").value,
+                        Remarks: document.getElementById("message").value,
+                        Product_Code: "PU",
+                        CompanyName: "JUNOON"
+                    }),
+                });
+                const data = await res.json();
 
-                document.getElementById("myform").reset();
+                if (data.Status) {
+                    Toastify({
+                        text: data.Message,
+                        duration: 3000,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#1dcd9f",
+                    }).showToast();
+
+                    document.getElementById("myform").reset();
                 } else {
-                Toastify({
-                    text: data.Message || "Something went wrong",
-                    duration: 3000,
-                    gravity: "top",
-                    position: "right",
-                    backgroundColor: "red",
-                }).showToast();
+                    Toastify({
+                        text: data.Message || "Something went wrong",
+                        duration: 3000,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "red",
+                    }).showToast();
+                }
+            } catch (err) {
+                console.log(err);
+                alert("Error ❌");
+            } finally {
+                button.innerText = "Send Message";
+                button.disabled = false;
             }
-        } catch (err) {
-            console.log(err);
-            alert("Error ❌");
-        } finally {
-            button.innerText = "Send Message";
-            button.disabled = false;
-        }
         });
-        
+
         document.addEventListener('DOMContentLoaded', function () {
             // Initialize AOS animation library
             AOS.init({
